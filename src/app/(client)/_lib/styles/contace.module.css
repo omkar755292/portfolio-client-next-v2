@@ -1,0 +1,36 @@
+.contact-section {
+    margin-top: 4vw;
+  }
+  
+  .contact-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(83, 40, 213, 0.1);
+  }
+  
+  .contact-form {
+    padding: 2VW;
+    margin-bottom: 30px;
+  }
+  
+  .contact-container input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form button {
+    width: 100%;
+    background-color: rgb(120, 15, 255);
+    color: white;
+  }
+  
+  .contact-form button:hover {
+    background-color: white;
+    color: rgb(120, 15, 255);
+  }

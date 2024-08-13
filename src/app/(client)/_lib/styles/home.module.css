@@ -1,0 +1,125 @@
+/* Home section  */
+.homeSection {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.homeContainer {
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.homeContainer h1 {
+  padding: 1rem;
+  margin: 20px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.homeContainer p {
+  font-size: 1.3rem;
+  /* Responsive font size */
+}
+
+.homeContainer img {
+  width: 55%;
+  margin-top: 4rem;
+}
+
+/* download button */
+.downloadIcon {
+  height: 50px;
+  width: 50px;
+}
+
+.downloadResume {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.downloadResume a {
+  text-decoration: none;
+  color: rgb(120, 15, 255);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  /* Align icon and text vertically */
+}
+
+.downloadResume a:hover {
+  font-weight: 900;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .homeSection {
+    height: auto;
+    /* Allow height to adjust on smaller screens */
+    padding: 0 0.5rem;
+    /* Adjust padding */
+  }
+
+  .homeContainer h1 {
+    font-size: 1.5rem;
+    /* Adjust font size */
+  }
+
+  .homeContainer p {
+    font-size: 1rem;
+    /* Adjust font size */
+  }
+
+  .homeContainer img {
+    width: 50%;
+    /* Make image larger on smaller screens */
+  }
+
+  .downloadResume {
+    bottom: 20px;
+    /* Adjust position for smaller screens */
+    right: 20px;
+    font-size: 0.9rem;
+    /* Adjust font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .homeContainer h1 {
+    font-size: 1.2rem;
+    /* Further reduce font size */
+  }
+
+  .homeContainer p {
+    font-size: 0.9rem;
+    /* Further reduce font size */
+  }
+
+
+  .downloadResume {
+    position: relative;
+    margin: 1rem;
+    padding: 5px;
+    top: 10px;
+    font-size: 0.8rem;
+  }
+
+
+  .homeContainer img {
+    width: 10%;
+    display: none;
+  }
+
+}

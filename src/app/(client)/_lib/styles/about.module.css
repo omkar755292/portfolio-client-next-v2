@@ -1,0 +1,28 @@
+/* CSS for about section  */
+
+.aboutContainer {
+    background-color: rgb(120, 15, 255);
+    color: white;
+    padding: 5vw;
+  }
+  
+  
+  /* CSS for internship section  */
+  
+  .internshipSection {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .internshipContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .internship img {
+    margin: 2vw;
+    width: 150px;
+  }
+
+  
