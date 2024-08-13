@@ -1,36 +1,96 @@
-.contact-section {
-    margin-top: 4vw;
+/* Contact Section */
+.contactSection {
+  margin-top: 4vw;
+  text-align: center;
+}
+
+/* Contact Container */
+.contactContainer {
+  position: relative;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 50px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(83, 40, 213, 0.1);
+}
+
+/* Contact Form */
+.contactForm {
+  padding: 2VW;
+  margin-bottom: 30px;
+}
+
+.contactContainer input,
+.contactContainer textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contactForm button {
+  border: 2px solid rgb(120, 15, 255);
+  width: 80%;
+  padding: 0.4rem;
+  background-color: rgb(120, 15, 255);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Social Media Links */
+.socialMediaLinks {
+ 
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.socialMediaLinks img {
+  width: 24px; /* Adjust size as needed */
+  height: 24px;
+  color: rgb(120, 15, 255);
+}
+
+.socialMediaLinks img:hover {
+  color: #000; /* Change color on hover */
+}
+
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+  .contactContainer {
+    padding: 30px;
+    box-shadow: none;
   }
-  
-  .contact-container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 50px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(83, 40, 213, 0.1);
+
+  .contactContainer input,
+  .contactContainer textarea {
+    width: 90%; /* Adjust width for smaller screens */
   }
-  
-  .contact-form {
-    padding: 2VW;
-    margin-bottom: 30px;
+
+  .contactForm button {
+    width: 90%; /* Adjust button width for smaller screens */
+    padding: 0.5rem; /* Adjust padding */
   }
-  
-  .contact-container input,
-  textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .contactContainer {
+    padding: 20px;
   }
-  
-  .contact-form button {
-    width: 100%;
-    background-color: rgb(120, 15, 255);
-    color: white;
+
+  .contactContainer input,
+  .contactContainer textarea {
+    width: 100%; /* Full width on very small screens */
   }
-  
-  .contact-form button:hover {
-    background-color: white;
-    color: rgb(120, 15, 255);
+
+  .contactForm button {
+    width: 100%; /* Full width on very small screens */
+    padding: 0.6rem; /* Adjust padding */
   }
+}
