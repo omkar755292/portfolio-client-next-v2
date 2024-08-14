@@ -1,6 +1,6 @@
 /* Contact Section */
 .contactSection {
-  margin-top: 4vw;
+  margin-top: 3vw;
   text-align: center;
 }
 
@@ -64,7 +64,7 @@
 @media (max-width: 768px) {
   .contactContainer {
     padding: 30px;
-    box-shadow: none;
+    /* box-shadow: none; */
   }
 
   .contactContainer input,
@@ -75,6 +75,15 @@
   .contactForm button {
     width: 90%; /* Adjust button width for smaller screens */
     padding: 0.5rem; /* Adjust padding */
+  }
+
+  .socialMediaLinks {
+    position: absolute;
+    display: flex;
+    top: 50px;
+    right: 3vw;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; 
   }
 }
 
@@ -90,7 +99,15 @@
   }
 
   .contactForm button {
-    width: 100%; /* Full width on very small screens */
-    padding: 0.6rem; /* Adjust padding */
+    width: 100%; 
+    padding: 0.6rem; 
   }
+
+  .socialMediaLinks {
+    position: absolute;
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center; 
+  }
+  
 }

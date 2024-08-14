@@ -55,8 +55,7 @@
   color: rgb(120, 15, 255);
   font-weight: 600;
   display: flex;
-  align-items: center;
-  /* Align icon and text vertically */
+  align-items: end;
 }
 
 .downloadResume a:hover {
@@ -83,14 +82,15 @@
   }
 
   .homeContainer img {
-    width: 50%;
+    width: 80%;
     /* Make image larger on smaller screens */
   }
 
   .downloadResume {
-    bottom: 20px;
+    position: absolute;
+    bottom: 200px;
     /* Adjust position for smaller screens */
-    right: 20px;
+    right: 50px;
     font-size: 0.9rem;
     /* Adjust font size */
   }
@@ -107,19 +107,19 @@
     /* Further reduce font size */
   }
 
-
   .downloadResume {
-    position: relative;
-    margin: 1rem;
-    padding: 5px;
-    top: 10px;
-    font-size: 0.8rem;
+    position: absolute;
+    bottom: 130px;
+    /* Adjust position for smaller screens */
+    right: 20px;
+    font-size: 0.9rem;
+    /* Adjust font size */
   }
 
 
   .homeContainer img {
-    width: 10%;
-    display: none;
+    width: 90%;
+    /* display: none; */
   }
 
 }
