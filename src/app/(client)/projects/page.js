@@ -1,27 +1,17 @@
 "use client";
-import axios from "axios";
+
 import styles from '../_lib/styles/project.module.css';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProjects } from "@/app/redux/slices/projectsSlice";
 
 function Project() {
-    const [projects, setProject] = useState([]);
-    const [loading, setLoading] = useState(true); // Track loading state
-    const [error, setError] = useState(null);
+    const dispatch = useDispatch();
+    const { projects, loading, error } = useSelector((state) => state.projects);
 
     useEffect(() => {
-        const getAllProjects = async () => {
-            try {
-                const response = await axios.get('/api/projects');
-                setProject(response.data);
-            } catch (error) {
-                setError('Error fetching projects');
-                console.error('Error fetching projects:', error);
-            } finally {
-                setLoading(false); // Set loading to false regardless of success or failure
-            }
-        };
-        getAllProjects();
+        dispatch(fetchProjects());
     }, []);
 
     if (loading) {

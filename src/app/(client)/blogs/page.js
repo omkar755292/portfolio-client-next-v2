@@ -1,30 +1,16 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import styles from '../_lib/styles/blog.module.css';
-import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBlogs } from '@/app/redux/slices/blogsSlice';
 
 function Blogs() {
-    const [blogs, setBlogs] = useState([]);
-    const [loading, setLoading] = useState(true); // Track loading state
-    const [error, setError] = useState(null); // Track errors
+    const dispatch = useDispatch();
+    const { blogs, loading, error } = useSelector((state) => state.blogs);
 
     useEffect(() => {
-        const getAllBlogs = async () => {
-            try {
-                const response = await axios.get('/api/blogs');
-                if (response.data) {
-                    setBlogs(response.data);
-                }
-            } catch (error) {
-                console.error('Error fetching blogs:', error);
-                setError('Failed to fetch blogs'); // Set error state
-            } finally {
-                setLoading(false); // Set loading to false once data is fetched
-            }
-        };
-
-        getAllBlogs();
+        dispatch(fetchBlogs());
     }, []);
 
     const scrollToTop = (e) => {

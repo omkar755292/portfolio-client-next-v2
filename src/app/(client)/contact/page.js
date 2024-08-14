@@ -7,24 +7,30 @@ function Contact() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [loading, setLoading] = useState(false); // For loading state
+    const [error, setError] = useState(null); // For error handling
+    const [success, setSuccess] = useState(null); // For success message
 
-    const add = (e) => {
+    const add = async (e) => {
         e.preventDefault();
-        const newMessage = { name, email, message };
-        postMessage(newMessage);
-        setName('');
-        setEmail('');
-        setMessage('');
-    }
+        setLoading(true);
+        setError(null);
+        setSuccess(null);
 
-    const postMessage = async (newMessage) => {
         try {
-            const response = await axios.post('/api/contact', newMessage);
+            const response = await axios.post('/api/message', { name, email, message });
+            setSuccess('Message sent successfully!');
             console.log(response);
         } catch (error) {
+            setError('Error sending message. Please try again.');
             console.error('Error sending message:', error);
+        } finally {
+            setLoading(false);
+            setName('');
+            setEmail('');
+            setMessage('');
         }
-    }
+    };
 
     return (
         <section className={styles.contactSection}>
@@ -37,16 +43,15 @@ function Contact() {
                         <img src='/assets/icons/instagram.png' alt="Instagram" />
                     </a>
                     <a href="https://www.linkedin.com/in/omkarpanchalcse" target="_blank" rel="noopener noreferrer">
-                        <img src='/assets/icons/linkedin.png' alt="Linkedin" />
+                        <img src='/assets/icons/linkedin.png' alt="LinkedIn" />
                     </a>
                     <a href="https://github.com/omkar755292" target="_blank" rel="noopener noreferrer">
                         <img src='/assets/icons/github.png' alt="GitHub" />
                     </a>
                     <a href="mailto:omkarpanchal.cse@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <img src='/assets/icons/email.png' alt="Email" />
+                        <img src='/assets/icons/email.png' alt="Email" />
                     </a>
                 </div>
-                {/* 780FFF */}
                 <div>
                     <h2>Contact Me</h2>
                     <img src='/assets/images/avatar.svg' alt="Avatar" />
@@ -59,8 +64,8 @@ function Contact() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder='Name'
-                        required />
-
+                        required
+                    />
                     <input
                         type="email"
                         id="email"
@@ -68,8 +73,8 @@ function Contact() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder='Email'
-                        required />
-
+                        required
+                    />
                     <textarea
                         id="message"
                         name="message"
@@ -77,9 +82,13 @@ function Contact() {
                         onChange={(e) => setMessage(e.target.value)}
                         rows="4"
                         placeholder='Message'
-                        required></textarea>
-
-                    <button type="submit">Send Message</button>
+                        required
+                    ></textarea>
+                    <button type="submit" disabled={loading}>
+                        {loading ? 'Sending...' : 'Send Message'}
+                    </button>
+                    {error && <p className={styles.error}>{error}</p>}
+                    {success && <p className={styles.success}>{success}</p>}
                 </form>
             </div>
         </section>
