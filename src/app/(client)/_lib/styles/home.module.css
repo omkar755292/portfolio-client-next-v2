@@ -31,7 +31,7 @@
 }
 
 .homeContainer img {
-  width: 55%;
+  width: 60%;
   margin-top: 4rem;
 }
 
@@ -88,11 +88,9 @@
 
   .downloadResume {
     position: absolute;
-    bottom: 200px;
-    /* Adjust position for smaller screens */
+    bottom: 150px;
     right: 50px;
     font-size: 0.9rem;
-    /* Adjust font size */
   }
 }
 

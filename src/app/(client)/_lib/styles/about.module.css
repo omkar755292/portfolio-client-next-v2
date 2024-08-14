@@ -1,28 +1,126 @@
-/* CSS for about section  */
-
+/* CSS for about section */
 .aboutContainer {
-    background-color: rgb(120, 15, 255);
-    color: white;
-    padding: 5vw;
-  }
-  
-  
-  /* CSS for internship section  */
-  
-  .internshipSection {
-    height: 60vh;
-    display: flex;
+  background-color: rgb(120, 15, 255);
+  color: white;
+  padding: 9vw;
+}
+
+.aboutContainer p {
+  font-size: 1.1rem;
+
+}
+
+.aboutContainer a {
+  color: blue;
+}
+
+/* CSS for timeline section */
+.internshipSection {
+  position: relative;
+  padding: 2vw;
+  background-color: rgb(240, 240, 240);
+}
+
+.experienceTitle {
+  font-size: 1.5rem;
+  margin-bottom: 2vw;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background-color: rgb(120, 15, 255);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  padding: 20px 0;
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.timelineItem:nth-child(even) {
+  left: 10%;
+}
+
+.timelineItem:nth-child(odd) {
+  right: 10%;
+}
+
+.timelineContent {
+  background: white;
+  border: 2px solid rgb(120, 15, 255);
+  border-radius: 6px;
+  padding: 20px;
+  position: relative;
+  width: 90%;
+  text-align: center;
+}
+
+.timelineItem:nth-child(even) .timelineContent {
+  margin-left: 30px;
+}
+
+.timelineItem:nth-child(odd) .timelineContent {
+  margin-right: 30px;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgb(120, 15, 255);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.timelineContent img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timelineItem {
+    width: 50%;
+    margin: 10px auto;
+    flex-direction: column;
     align-items: center;
   }
-  
-  .internshipContainer {
-    display: flex;
-    flex-wrap: wrap;
+
+  .timelineContent {
+    width: 100%;
+    margin: 10px;
   }
-  
-  .internship img {
-    margin: 2vw;
-    width: 150px;
+}
+
+@media (max-width: 480px) {
+
+  .timelineContent {
+    padding: 15px;
   }
 
-  
+  .timelineContent img {
+    width: 80px;
+  }
+}

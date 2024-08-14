@@ -1,14 +1,13 @@
 .header {
-    width: 100%;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    /* border: 2px solid black; */
 }
 
 .navbar {
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     padding: 20px;
     display: flex;
@@ -24,17 +23,12 @@
     display: flex;
     width: 60%;
     justify-content: space-around;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
 }
 
 .navlink a {
     color: black;
     padding: 0.5rem 1rem;
-    /* Use rem units for better responsiveness */
-    margin: 0 0.5rem;
     font-size: 1.3rem;
-    /* Responsive font size */
-    text-decoration: none;
 }
 
 .navlink a:hover {
@@ -48,8 +42,7 @@
     padding: 7px 18px;
     cursor: pointer;
     border-radius: 35px;
-    font-size: 1rem;
-    /* Responsive font size */
+    font-size: 0.9rem;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -68,7 +61,6 @@
 
 .burger img {
     width: 15px;
-    /* transform: rotate(90deg);  */
 }
 
 /* Media Queries for Responsiveness */
@@ -86,7 +78,7 @@
     }
 
     .navlink a {
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin: 5px 0;
     }
 
@@ -99,7 +91,7 @@
     }
 
     .businessInquiryButton {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         padding: 5px 15px;
         height: 42px;
         overflow: hidden;
@@ -113,7 +105,7 @@
     }
 
     .navlink a {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         padding: 0.5rem;
     }
 
