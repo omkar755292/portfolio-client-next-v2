@@ -11,6 +11,11 @@ const Header = () => {
         setIsNavOpen(!isNavOpen);
     };
 
+
+    const handleBooking = () => {
+        window.open('https://calendly.com/omkarpanchal-cse/30min-business-consultation', '_blank');
+    };
+
     return (
         <div className={styles.header}>
             <div className={styles.navbar}>
@@ -29,9 +34,12 @@ const Header = () => {
                         <img src="/assets/icons/arrowdown.png" alt="downarrow" />
                     </button>
                 </div>
-                <Link href="/businessInquiry" aria-label="Business Inquiry">
+                <button className={styles.businessInquiryButton} onClick={handleBooking}>
+                    Business Inquiry
+                </button>
+                {/* <Link href="/businessInquiry" aria-label="Business Inquiry">
                     <button className={styles.businessInquiryButton}>Business Inquiry</button>
-                </Link>
+                </Link> */}
 
             </div>
         </div>
