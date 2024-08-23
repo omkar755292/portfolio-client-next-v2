@@ -16,32 +16,26 @@ function About() {
                 <div className={styles.timeline}>
                     <div className={styles.timelineItem}>
                         <div className={styles.timelineContent}>
-                            <h2>ACMC</h2>
-                            <img src="/assets/images/img-intenship/acmcgrade.jpg" alt="ACMC Internship" />
-                            <p>Description or role details for ACMC.</p>
-                        </div>
-                    </div>
-                    <div className={styles.timelineItem}>
-                        <div className={styles.timelineContent}>
                             <h2>SocSpace</h2>
                             <img src="/assets/images/img-intenship/socspace.jpeg" alt="SocSpace Internship" />
-                            <p>Description or role details for SocSpace.</p>
+                            <p>Software Developer Intern</p>
                         </div>
                     </div>
                     <div className={styles.timelineItem}>
                         <div className={styles.timelineContent}>
                             <h2>Oasis</h2>
                             <img src="/assets/images/img-intenship/oasis.jpg" alt="Oasis Internship" />
-                            <p>Description or role details for Oasis.</p>
+                            <p>Web Desginer and Development Intern</p>
                         </div>
                     </div>
                     <div className={styles.timelineItem}>
                         <div className={styles.timelineContent}>
-                            <h2>Tatastu</h2>
-                            <img src="/assets/images/img-intenship/tatastu.png" alt="Tatastu Internship" />
-                            <p>Description or role details for Tatastu.</p>
+                            <h2>ACMC</h2>
+                            <img src="/assets/images/img-intenship/acmcgrade.jpg" alt="ACMC Internship" />
+                            <p>Web Developer</p>
                         </div>
                     </div>
+
                 </div>
             </section>
             <hr />

@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const Header = () => {
 
-    const [isNavOpen, setIsNavOpen] = useState(false);
+    const [isNavOpen, setIsNavOpen] = useState(true);
 
     const toggleNav = () => {
         setIsNavOpen(!isNavOpen);
