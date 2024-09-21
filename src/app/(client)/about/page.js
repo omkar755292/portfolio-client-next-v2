@@ -16,9 +16,22 @@ function About() {
                 <div className={styles.timeline}>
                     <div className={styles.timelineItem}>
                         <div className={styles.timelineContent}>
+                            <h2>AsIndia Innovations</h2>
+                            <img src="/assets/images/img-intenship/asindia.svg" alt="AsIndia Innovations" />
+                            <p>Associate Software Engineer</p>
+                            <p className={styles.timelineDates}>
+                                <span>August 2024 - Present</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div className={styles.timelineItem}>
+                        <div className={styles.timelineContent}>
                             <h2>SocSpace</h2>
                             <img src="/assets/images/img-intenship/socspace.jpeg" alt="SocSpace Internship" />
                             <p>Software Developer Intern</p>
+                            <p className={styles.timelineDates}>
+                                <span>July 2023 - August 2023</span>
+                            </p>
                         </div>
                     </div>
                     <div className={styles.timelineItem}>
@@ -26,13 +39,19 @@ function About() {
                             <h2>Oasis</h2>
                             <img src="/assets/images/img-intenship/oasis.jpg" alt="Oasis Internship" />
                             <p>Web Desginer and Development Intern</p>
+                            <p className={styles.timelineDates}>
+                                <span>July 2022 - July 2022</span>
+                            </p>
                         </div>
                     </div>
                     <div className={styles.timelineItem}>
                         <div className={styles.timelineContent}>
                             <h2>ACMC</h2>
                             <img src="/assets/images/img-intenship/acmcgrade.jpg" alt="ACMC Internship" />
-                            <p>Web Developer</p>
+                            <p>Web Development Intern</p>
+                            <p className={styles.timelineDates}>
+                                <span>April 2022 - June 2022</span>
+                            </p>
                         </div>
                     </div>
 

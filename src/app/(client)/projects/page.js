@@ -35,14 +35,14 @@ function Project() {
             "projectUrl": "https://supersaiyan.omkarcodes.online/",
             "projectImagePath": "/assets/images/img-projects/goku2.png",
         },
-        {
-            "_id": "5",
-            "title": "Amazon Clone",
-            "description": "A full-stack e-commerce web application that closely mimics the Amazon user interface",
-            "projectUrl": "https://clone.omkarcodes.online/",
-            "projectImagePath": "/assets/images/img-projects/amz.jfif",
+        // {
+        //     "_id": "5",
+        //     "title": "Amazon Clone",
+        //     "description": "A full-stack e-commerce web application that closely mimics the Amazon user interface",
+        //     "projectUrl": "https://clone.omkarcodes.online/",
+        //     "projectImagePath": "/assets/images/img-projects/amz.jfif",
 
-        },
+        // },
         {
             "_id": "6",
             "title": "React Admin Panel",
@@ -51,7 +51,7 @@ function Project() {
             "projectImagePath": "/assets/images/img-projects/laptop.svg",
 
         },
-       
+
     ]
 
     // Render Project function
@@ -64,9 +64,12 @@ function Project() {
                 </div>
             </div>
             <div>
-                <Link href={project.projectUrl} passHref>
-                    <button className={styles.projectViewButton}>View</button>
-                </Link>
+                <button
+                    className={styles.projectViewButton}
+                    onClick={() => window.open(project.projectUrl, '_blank', 'noopener noreferrer')}
+                >
+                    View
+                </button>
             </div>
         </div>
     ));
