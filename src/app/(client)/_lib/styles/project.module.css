@@ -6,7 +6,8 @@
 .projectContainer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center the items horizontally */
+    justify-content: center;
+    /* Center the items horizontally */
 }
 
 .projectCard {
@@ -17,20 +18,25 @@
     height: 240px;
     /* Ensure responsive sizing */
     box-sizing: border-box;
-    transition: transform 0.3s ease; /* Smooth transform on hover */
+    transition: transform 0.3s ease;
+    /* Smooth transform on hover */
 }
 
 .projectCard:hover {
-    transform: scale(1.05); /* Slightly enlarge card on hover */
+    transform: scale(1.05);
+    /* Slightly enlarge card on hover */
 }
 
 .imageContainer {
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 .imageContainer img {
-    width: 100%; /* Make image responsive */
-    height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .overlay {
@@ -39,7 +45,8 @@
     justify-content: center;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.9);
-    width: 100%; /* Make overlay responsive */
+    width: 100%;
+    /* Make overlay responsive */
     height: 100%;
     top: 0;
     opacity: 0;
@@ -52,12 +59,14 @@
 }
 
 .projectCard p {
-    font-size: 1rem; /* Use rem for better scalability */
+    font-size: 1rem;
+    /* Use rem for better scalability */
     margin: 0;
 }
 
 .projectViewButton {
-    font-size: 0.9rem; /* Use rem for better scalability */
+    font-size: 0.9rem;
+    /* Use rem for better scalability */
     color: rgb(120, 15, 255);
     background-color: transparent;
     border: 1px solid rgb(120, 15, 255);
@@ -92,23 +101,29 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .projectCard {
-        width: 100%; /* Full width on smaller screens */
-        max-width: 300px; /* Limit max width */
-        height: auto; /* Adjust height accordingly */
+        width: 100%;
+        /* Full width on smaller screens */
+        max-width: 300px;
+        /* Limit max width */
+        height: auto;
+        /* Adjust height accordingly */
     }
 }
 
 @media (max-width: 480px) {
     .projectCard {
         width: 100%;
-        margin: 2vw 0; /* Adjust margins for smaller screens */
+        margin: 2vw 0;
+        /* Adjust margins for smaller screens */
     }
 
     .projectViewButton {
-        font-size: 0.8rem; /* Smaller font size on very small screens */
+        font-size: 0.8rem;
+        /* Smaller font size on very small screens */
     }
 
     .projectSection {
-        padding: 4vw 2vw; /* Increase padding for very small screens */
+        padding: 4vw 2vw;
+        /* Increase padding for very small screens */
     }
 }

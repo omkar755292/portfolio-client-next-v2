@@ -1,30 +1,58 @@
 "use client";
 
 import styles from '../_lib/styles/project.module.css';
-import { useEffect } from "react";
 import Link from "next/link";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchProjects } from "@/app/redux/slices/projectsSlice";
 
 function Project() {
-    const dispatch = useDispatch();
-    const { projects, loading, error } = useSelector((state) => state.projects);
 
-    useEffect(() => {
-        dispatch(fetchProjects());
-    }, []);
+    const projects = [
+        {
+            "_id": "1",
+            "title": "Personal Portfolio and blog Website",
+            "description": "A personal website designed to showcase my portfolio, projects, and blogs",
+            "projectUrl": "https://omkarcodes.online/",
+            "projectImagePath": "/assets/images/img-projects/avatar.svg",
+        },
+        {
+            "_id": "2",
+            "title": "Video Calling App",
+            "description": "Created video calling app using WebRTC and Socket.io",
+            "projectUrl": "https://videocalling.omkarcodes.online/",
+            "projectImagePath": "/assets/images/img-projects/p7.png",
 
-    if (loading) {
-        return <p className={styles.loading}>Loading...</p>; // Loading message
-    }
+        },
+        {
+            "_id": "3",
+            "title": "Telephone Dairy",
+            "description": "A web-based application designed for efficient contact management",
+            "projectUrl": "https://telephonediary.omkarcodes.online/",
+            "projectImagePath": "/assets/images/img-projects/p3.png",
+        },
+        {
+            "_id": "4",
+            "title": "The Super Saiyan: Animation Game",
+            "description": "An interactive browser game featuring Goku from the Dragon Ball series, built with HTML, CSS, and JavaScript",
+            "projectUrl": "https://supersaiyan.omkarcodes.online/",
+            "projectImagePath": "/assets/images/img-projects/goku2.png",
+        },
+        {
+            "_id": "5",
+            "title": "Amazon Clone",
+            "description": "A full-stack e-commerce web application that closely mimics the Amazon user interface",
+            "projectUrl": "https://clone.omkarcodes.online/",
+            "projectImagePath": "/assets/images/img-projects/amz.jfif",
 
-    if (error) {
-        return <p className={styles.error}>{error}</p>; // Error message
-    }
+        },
+        {
+            "_id": "6",
+            "title": "React Admin Panel",
+            "description": "Implemented a React admin panel for efficient data management",
+            "projectUrl": "https://admin.omkarcodes.online/",
+            "projectImagePath": "/assets/images/img-projects/laptop.svg",
 
-    if (projects.length === 0) {
-        return <p className={styles.noProjectsFound}>No projects found</p>; // No Projects message
-    }
+        },
+       
+    ]
 
     // Render Project function
     const renderProject = projects.map((project) => (
