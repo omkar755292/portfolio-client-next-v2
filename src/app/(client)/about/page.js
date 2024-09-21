@@ -7,9 +7,24 @@ function About() {
             <div className={styles.aboutContainer}>
                 <h1>Who Am I? Get to Know Me!</h1>
                 <p>
-                    I am a Computer Engineering graduate from Singad Institute, Pune, currently working as a freelance programmer specializing in web development and cloud hosting/deployment. I enjoy sharing the technology-related knowledge I have accumulated over the years in the IT industry to help others in the developer community. Check out some of my blogs in the Blog section, and feel free to connect or follow me on my <a href='https://www.linkedin.com/in/omkarpanchalcse/' target='_blank' rel='noopener noreferrer'>LinkedIn</a> profile, where I post useful content related to programming. I am open to job opportunities where I can contribute, learn, and grow. If you have a promising opportunity that matches my skills and experience, please feel free to contact me.
+                    I am a Computer Engineering graduate from Sinhgad Institute, Pune, and currently working as an Associate Software Engineer at AsIndia Innovations, while also taking on freelance projects as a programmer specializing in web development and cloud hosting/deployment. I enjoy sharing the technology-related knowledge I’ve gained over the years to help others in the developer community. Check out some of my blogs in the Blog section, and feel free to connect or follow me on   <a href='https://www.linkedin.com/in/omkarpanchalcse/' target='_blank' rel='noopener noreferrer'>LinkedIn</a>, where I post useful content related to programming.
+                    I am open to freelance projects, so if you have a project that matches my skills, please feel free to contact me!
                 </p>
             </div>
+
+            <section className={styles.skillsSection}>
+                <h1 className={styles.skillsTitle}>Skills</h1>
+                <div className={styles.skillsContainer}>
+                    <ul>
+                        <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React, Next.js, UI/UX Design</li>
+                        <li><strong>Backend:</strong> Node.js, Express, MongoDB, Redis</li>
+                        <li><strong>DevOps and Deployment:</strong> Docker, GitHub Actions, AWS, Nginx, Domain setup and management</li>
+                        <li><strong>Real-Time Communication:</strong> WebRTC, Socket.io</li>
+                        <li><strong>Others:</strong> Domain Setup and management, SEO Optimization, AWS EC2 and Server Management</li>
+                        <li><strong>Version Control:</strong> Git</li>
+                    </ul>
+                </div>
+            </section>
 
             <section className={styles.internshipSection}>
                 <h1 className={styles.experienceTitle}>Work Experience</h1>
@@ -57,6 +72,9 @@ function About() {
 
                 </div>
             </section>
+
+
+
             <hr />
         </main>
     );

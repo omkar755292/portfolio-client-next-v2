@@ -23,7 +23,7 @@
 
 .experienceTitle {
   font-size: 1.5rem;
-  margin-bottom: 1vw;
+  margin: 1vw;
 }
 
 .timeline {
@@ -78,6 +78,36 @@
   color: rgb(120, 15, 255);
   margin-top: 5px;
 }
+
+/* Skill section Css  */
+.skillsSection {
+  margin: 40px;
+}
+
+.skillsTitle {
+  margin-bottom: 20px;
+  font: 1.5rem;
+}
+
+.skillsContainer ul {
+  list-style-type: none; 
+  padding: 0; 
+}
+
+.skillsContainer li {
+  background-color: #fff; 
+  padding: 10px; 
+  margin-bottom: 10px; 
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skillsContainer li strong {
+  color: rgb(120, 15, 255);
+}
+
+
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
