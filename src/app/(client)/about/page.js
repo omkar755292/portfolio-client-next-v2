@@ -18,7 +18,7 @@ function About() {
                     <ul>
                         <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React, Next.js, UI/UX Design</li>
                         <li><strong>Backend:</strong> Node.js, Express, MongoDB, Redis</li>
-                        <li><strong>DevOps and Deployment:</strong> Docker, GitHub Actions, AWS, Nginx, Domain setup and management</li>
+                        <li><strong>DevOps and Deployment:</strong> Docker, GitHub Actions, AWS, Nginx</li>
                         <li><strong>Real-Time Communication:</strong> WebRTC, Socket.io</li>
                         <li><strong>Others:</strong> Domain Setup and management, SEO Optimization, AWS EC2 and Server Management</li>
                         <li><strong>Version Control:</strong> Git</li>
