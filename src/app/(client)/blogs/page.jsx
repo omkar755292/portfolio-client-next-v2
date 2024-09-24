@@ -5,6 +5,8 @@ import styles from '../_lib/styles/blog.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchBlogs } from '@/app/redux/slices/blogsSlice';
 
+
+
 function Blogs() {
     const dispatch = useDispatch();
     const { blogs, loading, error } = useSelector((state) => state.blogs);
